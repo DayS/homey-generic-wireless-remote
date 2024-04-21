@@ -1,0 +1,35 @@
+{
+  "name": {
+    "en": "Princeton24bits"
+  },
+  "class": "doorbell",
+  "capabilities": [
+    "button"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "rf433"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "rf_transmitter_learn",
+      "options": {
+        "title": {
+          "en": "Press any button",
+          "nl": "Druk op een willekeurige knop"
+        },
+        "instruction": {
+          "en": "Press any button on your device.",
+          "nl": "Druk op een willekeurige knop op het apparaat"
+        }
+      }
+    }
+  ]
+}

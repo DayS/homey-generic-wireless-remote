@@ -1,0 +1,30 @@
+{
+  "id": "fr.dvilleneuve.generic_wireless_remote",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Generic Wireless Remote"
+  },
+  "description": {
+    "en": "Adds support for generic wireless remote"
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [
+    "homey:wireless:433"
+  ],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Damien Villeneuve",
+    "email": "damien.villeneuve.44@gmail.com"
+  }
+}

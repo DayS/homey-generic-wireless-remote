@@ -1,0 +1,11 @@
+{
+  "words": [
+    [200, 600],
+    [600, 200]
+  ],
+  "interval": 6500,
+  "sensitivity": 0.5,
+  "repetitions": 10,
+  "minimalLength": 24,
+  "maximalLength": 24
+}

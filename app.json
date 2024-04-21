@@ -1,0 +1,108 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "fr.dvilleneuve.generic_wireless_remote",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Generic Wireless Remote"
+  },
+  "description": {
+    "en": "Adds support for generic wireless remote"
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [
+    "homey:wireless:433"
+  ],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Damien Villeneuve",
+    "email": "damien.villeneuve.44@gmail.com"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "ringbell:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=princeton24bits"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Princeton24bits"
+      },
+      "class": "doorbell",
+      "capabilities": [
+        "button"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "rf433"
+      ],
+      "images": {
+        "small": "/drivers/princeton24bits/assets/images/small.png",
+        "large": "/drivers/princeton24bits/assets/images/large.png",
+        "xlarge": "/drivers/princeton24bits/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "rf_transmitter_learn",
+          "options": {
+            "title": {
+              "en": "Press any button",
+              "nl": "Druk op een willekeurige knop"
+            },
+            "instruction": {
+              "en": "Press any button on your device.",
+              "nl": "Druk op een willekeurige knop op het apparaat"
+            }
+          }
+        }
+      ],
+      "id": "princeton24bits"
+    }
+  ],
+  "signals": {
+    "433": {
+      "princeton_24bits": {
+        "words": [
+          [
+            200,
+            600
+          ],
+          [
+            600,
+            200
+          ]
+        ],
+        "interval": 6500,
+        "sensitivity": 0.5,
+        "repetitions": 10,
+        "minimalLength": 24,
+        "maximalLength": 24
+      }
+    }
+  }
+}
